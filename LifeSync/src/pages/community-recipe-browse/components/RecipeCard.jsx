@@ -11,7 +11,7 @@ function RecipeCard({ recipe, onClick }) {
       {/* Imagen de la receta */}
       <div className="relative h-48 overflow-hidden">
         <Image
-          src={`http://18.226.28.149:4029${recipe.imagen}`} // Usa el path correcto
+          src={`http://13.58.67.38:4029${recipe.imagen}`} // Usa el path correcto
           alt={recipe.descripcion}
           className="w-full h-full object-cover"
         />

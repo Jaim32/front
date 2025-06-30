@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import Icon from 'components/AppIcon';
 
-const API_BASE = 'http://18.226.28.149:8082';
+const API_BASE = 'http://13.58.67.38:8082';
 
 export default function LifePointsCard() {
   const [points, setPoints] = useState(0);

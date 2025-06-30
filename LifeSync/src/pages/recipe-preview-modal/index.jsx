@@ -35,7 +35,7 @@ const RecipePreviewModal = () => {
   useEffect(() => {
     const fetchRecipe = async () => {
       try {
-        const res = await fetch(`http://18.226.28.149:8082/recetas/${recipeId}`);
+        const res = await fetch(`http://13.58.67.38:8082/recetas/${recipeId}`);
         if (!res.ok) throw new Error('Error fetching recipe');
         const data = await res.json();
         setRecipeData(data);

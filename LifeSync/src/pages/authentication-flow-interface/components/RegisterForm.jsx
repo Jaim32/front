@@ -97,7 +97,7 @@ const RegisterForm = ({ prefillData = {}, onSuccess, isLoading, setIsLoading }) 
     };
 
     try {
-      const response = await fetch('http://18.226.28.149:8082/api/usuarios/create', {
+      const response = await fetch('http://13.58.67.38:8082/api/usuarios/create', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(userPayload)

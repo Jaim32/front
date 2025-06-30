@@ -13,7 +13,7 @@ function RecipeDetailView() {
 
   useEffect(() => {
     if (recipeId) {
-      fetch(`http://18.226.28.149:8082/recetas/${recipeId}`)
+      fetch(`http://13.58.67.38:8082/recetas/${recipeId}`)
         .then((res) => {
           if (!res.ok) {
             throw new Error('Failed to fetch recipe');

@@ -32,7 +32,7 @@ function CommunityRecipeBrowse() {
   useEffect(() => {
     const token = localStorage.getItem('token');
 
-    axios.get('http://18.226.28.149:8082/api/recetas/publicas', {
+    axios.get('http://13.58.67.38:8082/api/recetas/publicas', {
       headers: {
         Authorization: `Bearer ${token}`
       }
@@ -51,7 +51,7 @@ function CommunityRecipeBrowse() {
         // Obtener info del autor para cada receta
         const enrichedRecipes = await Promise.all(validRecipes.map(async (recipe) => {
           try {
-            const userRes = await axios.get(`http://18.226.28.149:8082/api/usuarios/getById?idUsuario=${recipe.id_Usuario}`, {
+            const userRes = await axios.get(`http://13.58.67.38:8082/api/usuarios/getById?idUsuario=${recipe.id_Usuario}`, {
               headers: { Authorization: `Bearer ${token}` }
             });
 

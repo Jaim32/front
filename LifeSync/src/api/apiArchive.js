@@ -1,7 +1,7 @@
 // src/api/apiArchive.js
 import axios from 'axios';
 
-const API_BACK = import.meta.env.VITE_API_URL || 'http://18.226.28.149:8082';
+const API_BACK = import.meta.env.VITE_API_URL || 'http://13.58.67.38:8082';
 
 const client = axios.create({
   baseURL: API_BACK + '/api',  // apuntas directo a tu backend

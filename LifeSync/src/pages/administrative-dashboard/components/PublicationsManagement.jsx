@@ -22,7 +22,7 @@ const PublicationsManagement = () => {
     const fetchRecipes = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get(`http://18.226.28.149:8082/api/recetas`, {
+        const response = await axios.get(`http://13.58.67.38:8082/api/recetas`, {
           headers: { Authorization: `Bearer ${token}` },
         });
 
@@ -35,7 +35,7 @@ const PublicationsManagement = () => {
         const userMap = {};
         await Promise.all(userIds.map(async (id) => {
           try {
-            const userRes = await axios.get(`http://18.226.28.149:8082/api/usuarios/getById?idUsuario=${id}`, {
+            const userRes = await axios.get(`http://13.58.67.38:8082/api/usuarios/getById?idUsuario=${id}`, {
               headers: { Authorization: `Bearer ${token}` },
             });
             userMap[id] = userRes.data.nombre;
@@ -83,7 +83,7 @@ const PublicationsManagement = () => {
     if (!recipeToDelete) return;
     try {
       const token = localStorage.getItem('token');
-      await axios.delete(`http://18.226.28.149:8082/api/recetas/${recipeToDelete.id}`, {
+      await axios.delete(`http://13.58.67.38:8082/api/recetas/${recipeToDelete.id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setRecipes((prev) => prev.filter((r) => r.id !== recipeToDelete.id));

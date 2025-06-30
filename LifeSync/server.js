@@ -38,5 +38,5 @@ app.post('/uploads', upload.single('file'), (req, res) => {
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 app.listen(PORT, () => {
-  console.log(`Servidor de subida corriendo en http://18.226.28.149:${PORT}`);
+  console.log(`Servidor de subida corriendo en http://13.58.67.38:${PORT}`);
 });

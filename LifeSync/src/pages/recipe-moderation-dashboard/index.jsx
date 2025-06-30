@@ -43,7 +43,7 @@ setUserRole(role === 'CATADOR' ? 'CATADOR' : 'USER');
     const fetchRecipes = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('http://18.226.28.149:8082/api/recetas/pendientes', {
+        const response = await axios.get('http://13.58.67.38:8082/api/recetas/pendientes', {
           headers: {
             Authorization: `Bearer ${token}`
           }
@@ -55,7 +55,7 @@ setUserRole(role === 'CATADOR' ? 'CATADOR' : 'USER');
           recetas.map(async (r) => {
             let authorName = 'Desconocido';
             try {
-              const userResp = await axios.get(`http://18.226.28.149:8082/api/usuarios/getById?idUsuario=${r.id_Usuario}`, {
+              const userResp = await axios.get(`http://13.58.67.38:8082/api/usuarios/getById?idUsuario=${r.id_Usuario}`, {
                 headers: {
                   Authorization: `Bearer ${token}`
                 }
@@ -128,7 +128,7 @@ setUserRole(role === 'CATADOR' ? 'CATADOR' : 'USER');
       }
 
       try {
-        const response = await axios.put(`http://18.226.28.149:8082/api/recetas/${recipeId}/aprobacion`, {
+        const response = await axios.put(`http://13.58.67.38:8082/api/recetas/${recipeId}/aprobacion`, {
           aprobada: true
         }, {
           headers: {

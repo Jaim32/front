@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import Icon from 'components/AppIcon';
 
-const API_BACK = import.meta.env.VITE_API_URL || 'http://18.226.28.149:8082';
+const API_BACK = import.meta.env.VITE_API_URL || 'http://13.58.67.38:8082';
 const API_FDC = import.meta.env.VITE_FDC_BASE_URL || 'https://api.nal.usda.gov/fdc/v1';
 const FDC_KEY = import.meta.env.VITE_FDC_API_KEY;
 

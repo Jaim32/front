@@ -52,7 +52,7 @@ export default function ProfileSlide({ isOpen, onClose }) {
       try {
         const token = localStorage.getItem("token");
         const response = await axios.get(
-          `http://18.226.28.149:8082/api/recetas/usuario/${userData.id}`,
+          `http://13.58.67.38:8082/api/recetas/usuario/${userData.id}`,
           { headers: { Authorization: `Bearer ${token}` } }
         );
         const adapted = response.data.map((r) => ({
@@ -83,7 +83,7 @@ export default function ProfileSlide({ isOpen, onClose }) {
       recipes: [],
     });
     onClose();
-    window.location.href = "http://18.226.28.149:4028/";
+    window.location.href = "http://13.58.67.38:4028/";
   };
 
   // Manejador de boton "Actualizar peso"
@@ -95,7 +95,7 @@ export default function ProfileSlide({ isOpen, onClose }) {
     try {
       const token = localStorage.getItem("token");
       await axios.patch(
-        `http://18.226.28.149:8082/api/usuarios/${userData.id}/peso`,
+        `http://13.58.67.38:8082/api/usuarios/${userData.id}/peso`,
         null,
         {
           params: { nuevoPeso: parseFloat(newWeight) },

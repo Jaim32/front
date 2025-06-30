@@ -71,7 +71,7 @@ const MealSummaryPanel = ({
   };
 
   try {
-    const res = await fetch('http://18.226.28.149:8082/api/platillos', {
+    const res = await fetch('http://13.58.67.38:8082/api/platillos', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

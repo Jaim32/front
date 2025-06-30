@@ -93,7 +93,7 @@ function RecipeCreationForm() {
     formDataImg.append("file", file);
 
     try {
-      const res = await fetch("http://18.226.28.149:4029/uploads", {
+      const res = await fetch("http://13.58.67.38:4029/uploads", {
         method: "POST",
         body: formDataImg,
       });

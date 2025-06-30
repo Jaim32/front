@@ -18,7 +18,7 @@ const TasterManagement = () => {
 
   const fetchTasters = async () => {
     try {
-      const response = await fetch('http://18.226.28.149:8082/api/usuarios/all', {
+      const response = await fetch('http://13.58.67.38:8082/api/usuarios/all', {
         headers: {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${localStorage.getItem('token')}`,
@@ -68,7 +68,7 @@ const TasterManagement = () => {
         };
 
         const response = await fetch(
-          `http://18.226.28.149:8082/api/usuarios/update?idUsuario=${pendingActionUser.id}`,
+          `http://13.58.67.38:8082/api/usuarios/update?idUsuario=${pendingActionUser.id}`,
           {
             method: 'PUT',
             headers: {
@@ -95,7 +95,7 @@ const TasterManagement = () => {
         );
       } else if (confirmActionType === 'delete') {
         const response = await fetch(
-          `http://18.226.28.149:8082/api/usuarios/delete?idUsuario=${pendingActionUser.id}`,
+          `http://13.58.67.38:8082/api/usuarios/delete?idUsuario=${pendingActionUser.id}`,
           {
             method: 'DELETE',
             headers: {
